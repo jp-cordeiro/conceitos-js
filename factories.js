@@ -17,7 +17,7 @@ function makePessoa(nome,idade) {
 }
 
 /*
-Apesar de fabricar um obejo semelhante a pessoa, retorna um objeto puro enão do tipo de pessoa
+Apesar de fabricar um objeto semelhante a pessoa, retorna um objeto puro e não do tipo de pessoa
  */
 function makePessoa(nome, idade){
     const estado ={nome,idade,falar,envelhecer}
