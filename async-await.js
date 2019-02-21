@@ -18,4 +18,23 @@ async function getPosts() {
     }
 }
 
-getPosts()
+//getPosts()
+
+/*
+Multiplas promises
+ */
+
+async function getUsers(users) {
+    const promises = users.map(
+        user => fetch(`https://api.github.com/users/${user}`)
+            .then(r => r.json())
+    )
+
+    const people = await Promise.all(promises)
+    console.log(people)
+}
+
+getUsers([
+    'jp-cordeiro',
+    'AlexSousaAlvess'
+])
